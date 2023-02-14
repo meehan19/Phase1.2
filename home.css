@@ -1,0 +1,24 @@
+html {
+    background-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tab {
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background-color: lightgray;
+}
