@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="NavBar.css" >
+    <link rel="stylesheet" type="text/css" href="NavBar.css">
+    <link rel="stylesheet" type="text/css" href="ToDo.css">
 </head>
 <body>
     <nav>
@@ -16,8 +17,60 @@
         <span class="tab"><a href="Colors.html">Colors</a></span>
         <span class="tab"><a href="LowerRight.html">Lower Right</a></span>
     </nav>
-    <div>
-        To Do Page
+    <div id="main">
+        <strong>To Do</strong>
+        <form>
+            <input id="entryText" type="text" name="entry" placeholder="New entry..." >
+            <input id="addButton" type="button" value=" Add ">
+        </form>
+        <div id="listContainer">
+
+        </div>
     </div>
+
+    <script>
+        const addButton = document.getElementById('addButton');
+        const listContainer = document.getElementById('listContainer');
+        const entryText = document.getElementById('entryText');
+
+        addButton.addEventListener('click', addEntry);
+
+        function addEntry() {
+            const listItem = document.createElement('div');
+            listItem.className = 'listEntry';
+
+            const textNode = document.createTextNode(entryText.value);
+            entryText.value = '';
+            listItem.appendChild(textNode);
+
+            const removeButton = document.createElement('input');
+            removeButton.type = 'button';
+            removeButton.value = ' Remove ';
+            removeButton.className = 'removeButton';
+            removeButton.addEventListener('click', () => {
+                removeButton.parentElement.remove();
+            })
+            listItem.appendChild(removeButton);
+
+            const doneButton = document.createElement('input');
+            doneButton.type = 'button';
+            doneButton.value = ' Done ';
+            doneButton.className = 'doneButton';
+            doneButton.addEventListener('click', () => {
+                doneButton.hidden = true;
+                const parent = doneButton.parentElement;
+                parent.style.backgroundColor = 'lightgray';
+                const check = document.createElement('span');
+                check.appendChild(document.createTextNode('\u2713'));
+                check.className = 'checkMark';
+                parent.appendChild(check);
+            })
+            listItem.appendChild(doneButton);
+
+            listContainer.appendChild(listItem);
+
+        }
+    </script>
+
 </body>
 </html>
