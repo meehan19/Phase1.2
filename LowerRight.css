@@ -1,0 +1,16 @@
+h1 {
+    padding: 8px
+}
+
+.contents {
+    height: 100%;
+    display: flex;
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 8px;
+    flex: 1;
+}
