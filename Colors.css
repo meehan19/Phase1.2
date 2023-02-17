@@ -1,0 +1,20 @@
+h1 {
+    padding: 8px
+}
+
+.boxes {
+    padding-top: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.box1 {
+    background-color: black;
+    color: yellow;
+}
+
+.box2 {
+    background-color: yellow;
+    color: purple;
+}
