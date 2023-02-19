@@ -1,0 +1,14 @@
+input[type="submit"] {
+    white-space: normal;
+    width: 250px;
+}
+div {
+    background-color: pink;
+    height: 900px;
+    padding-top: 1rem;
+}
+
+#output{
+    font-size: larger;
+    font-weight:bolder
+}

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="NavBar.css" >
+    <link rel="stylesheet" type="text/css" href="Choices.css" >
+
 </head>
 <body>
     <nav>
@@ -17,7 +19,49 @@
         <span class="tab"><a href="LowerRight.html">Lower Right</a></span>
     </nav>
     <div>
-        Choices Page
+        <h3>Choices</h3>
+
+        <br>
+        
+        <p>Hat color to place on Player One's head:
+            <br>
+            <input type="radio" id="red" name="player1Color" value="Red">
+            <label for="red">Red</label> 
+            <input type="radio" id="blue" name="player1Color" value="Blue">
+            <label for="blue">Blue</label>
+        </p>
+        
+        <br>
+    
+        <p>Hat color to place on Player Two's head:
+    
+            <br>
+    
+            <select id="player2Color">
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+            </select>
+        </p>
+    
+        <br>
+     
+       <input type="submit" value="Have Computer Players Make Guesses Exactly One Will Be Correct" onclick="submit()">
+
+       <p id = "output">
+
+       </p>
+    
     </div>
+
+    <script>
+        function submit(){
+           let player2 = document.getElementById('player2Color').value
+
+           let player1 = document.querySelector('input[type="radio"]:checked').value
+        
+            document.getElementById("output").innerHTML = `<br>Player one hat color is: ${player1} <br> Player two hat color is: ${player2}`
+
+        }
+    </script>
 </body>
 </html>
