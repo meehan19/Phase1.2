@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="profile.css" /> <!-- link appropriate html and css files -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="NavBar.css" >
+    <link rel="stylesheet" type="text/css" href="NavBar.css">
 </head>
+
 <body>
     <nav>
         <span class="tab"><a href="Text.html">Text</a></span>
@@ -17,7 +20,41 @@
         <span class="tab"><a href="LowerRight.html">Lower Right</a></span>
     </nav>
     <div>
-        Profile Page
+        <h3> <b>Profile</b> </h3>
+
+        <br><br>
+
+        <!-- Alert that appears when clicking on the name -->
+
+
+        <!-- Profile Image with caption -->
+        <figure>
+            <img onclick="displayAlert()" src="default_profile_image.png" alt="Default profile image"
+                class="avatar_image" />
+            <figcaption><b>John Doe</b></figcaption>
+        </figure>
+
+        <!-- warning message that appars when image is clicked -->
+
+        <a href="#" class="warning_message" id="message">
+            <span><b>Warning!</b> Do not click on the profile image.</span>
+            <span class="x_button" onclick="hideWarningMessage()"><b>X</b></span>
+        </a>
+
+
+        <!-- Initiate alert when profile picture is pressed -->
+        <script>
+            function displayAlert() {
+                document.getElementById("message").style.visibility = "visible";
+            }
+            function hideWarningMessage() {
+                document.getElementById("message").style.visibility = "hidden";
+            }
+        </script>
+
+
+
     </div>
 </body>
+
 </html>

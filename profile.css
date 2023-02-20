@@ -1,0 +1,45 @@
+div {
+    background-color: pink;
+}
+
+.avatar_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+    border: 1px solid black;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* warming message is only a */
+.warning_message {
+
+    width: 335px;
+
+    background-color: orange;
+    color: white;
+
+    display: inline-block;
+    position: relative;
+
+    padding: 10px 20px;
+
+    visibility: hidden;
+
+}
+
+.warning_message .x_button {
+
+    position: absolute;
+
+    top: 0px;
+    right: 0px;
+
+    padding: 10px 20px;
+
+
+}
