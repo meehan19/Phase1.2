@@ -1,5 +1,6 @@
 div {
     background-color: pink;
+    height: 900px;  /* had to make it larger than the iPhone SE dimensions for some reason*/
 }
 
 .avatar_image {
